@@ -1,4 +1,5 @@
 using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace Solnet.Rpc.Models
 {
@@ -15,13 +16,13 @@ namespace Solnet.Rpc.Models
         /// <summary>
         /// The vote account address, as a base-58 encoded string.
         /// </summary>
-        [JsonPropertyName("votePubkey")]
+        [JsonProperty(PropertyName = "votePubkey")]
         public string VotePublicKey { get; set; }
 
         /// <summary>
         /// The validator identity, as a base-58 encoded string.
         /// </summary>
-        [JsonPropertyName("nodePubkey")]
+        [JsonProperty(PropertyName = "nodePubkey")]
         public string NodePublicKey { get; set; }
 
         /// <summary>

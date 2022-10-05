@@ -1,8 +1,6 @@
+using Newtonsoft.Json;
 using Solnet.Rpc.Messages;
-using Solnet.Rpc.Models;
 using System;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 
 namespace Solnet.Rpc.Converters
 {
@@ -12,23 +10,25 @@ namespace Solnet.Rpc.Converters
     public class RpcErrorResponseConverter : JsonConverter<JsonRpcErrorResponse>
     {
         /// <summary>
-        /// Reads and converts the JSON to type <c>JsonRpcErrorResponse</c>.
+        /// Reads the JSON representation of the object.
         /// </summary>
-        /// <param name="reader">The reader.</param>
-        /// <param name="typeToConvert"> The type to convert.</param>
-        /// <param name="options">An object that specifies serialization options to use.</param>
-        /// <returns>The converted value.</returns>
-        public override JsonRpcErrorResponse Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+        /// <param name="reader">The <see cref="JsonReader"/> to read from.</param>
+        /// <param name="objectType">Type of the object.</param>
+        /// <param name="existingValue">The existing value of object being read. If there is no existing value then <c>null</c> will be used.</param>
+        /// <param name="hasExistingValue">The existing value has a value.</param>
+        /// <param name="serializer">The calling serializer.</param>
+        /// <returns>The object value.</returns>
+        public override JsonRpcErrorResponse ReadJson(JsonReader reader, Type objectType, JsonRpcErrorResponse existingValue, bool hasExistingValue, JsonSerializer serializer)
         {
-            if (reader.TokenType != JsonTokenType.StartObject) return null;
+            if (reader.TokenType != JsonToken.StartObject) return null;
 
             reader.Read();
 
             var err = new JsonRpcErrorResponse();
 
-            while (reader.TokenType != JsonTokenType.EndObject)
+            while (reader.TokenType != JsonToken.EndObject)
             {
-                var prop = reader.GetString();
+                var prop = reader.Value.ToString();
 
                 reader.Read();
 
@@ -38,26 +38,26 @@ namespace Solnet.Rpc.Converters
                 }
                 else if ("id" == prop)
                 {
-                    err.Id = reader.GetInt32();
+                    err.Id = (int)reader.ReadAsInt32();
                 }
                 else if ("error" == prop)
                 {
-                    if(reader.TokenType == JsonTokenType.String)
+                    if(reader.TokenType == JsonToken.String)
                     {
-                        err.ErrorMessage = reader.GetString();
+                        err.ErrorMessage = reader.Value.ToString();;
                     }
-                    else if(reader.TokenType == JsonTokenType.StartObject)
+                    else if(reader.TokenType == JsonToken.StartObject)
                     {
-                        err.Error = JsonSerializer.Deserialize<ErrorContent>(ref reader, options);
+                        err.Error = JsonConvert.DeserializeObject<ErrorContent>(reader.Value.ToString());
                     }
                     else
                     {
-                        reader.TrySkip();
+                        reader.Skip();
                     }
                 }
                 else
                 {
-                    reader.TrySkip();
+                    reader.Skip();
                 }
 
                 reader.Read();
@@ -66,12 +66,12 @@ namespace Solnet.Rpc.Converters
         }
 
         /// <summary>
-        /// Not implemented.
+        /// Writes the JSON representation of the object.
         /// </summary>
-        /// <param name="writer">n/a</param>
-        /// <param name="value">n/a</param>
-        /// <param name="options">n/a</param>
-        public override void Write(Utf8JsonWriter writer, JsonRpcErrorResponse value, JsonSerializerOptions options)
+        /// <param name="writer">The <see cref="JsonWriter"/> to write to.</param>
+        /// <param name="value">The value.</param>
+        /// <param name="serializer">The calling serializer.</param>
+        public override void WriteJson(JsonWriter writer, JsonRpcErrorResponse value, JsonSerializer serializer)
         {
             throw new NotImplementedException();
         }

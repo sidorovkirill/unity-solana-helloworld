@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace Solnet.Rpc.Messages
 {
@@ -16,7 +16,7 @@ namespace Solnet.Rpc.Messages
         /// <summary>
         /// The method parameters list.
         /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public IList<object> Params { get; }
 
         internal JsonRpcRequest(int id, string method, IList<object> parameters)

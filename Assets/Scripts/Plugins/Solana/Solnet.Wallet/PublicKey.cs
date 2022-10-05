@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using Org.BouncyCastle.Crypto.Digests;
 
 namespace Solnet.Wallet
 {
@@ -295,7 +296,9 @@ namespace Solnet.Wallet
             buffer.Write(programId.KeyBytes);
             buffer.Write(ProgramDerivedAddressBytes);
 
-            byte[] hash = SHA256.HashData(new ReadOnlySpan<byte>(buffer.GetBuffer(), 0, (int)buffer.Length));
+            SHA256Managed hashstring = new SHA256Managed();
+            
+            byte[] hash = hashstring.ComputeHash(buffer.GetBuffer());
 
             if (hash.IsOnCurve())
             {
@@ -372,7 +375,9 @@ namespace Solnet.Wallet
                 }
             }
 
-            byte[] hash = SHA256.HashData(seeds);
+            SHA256Managed hashstring = new SHA256Managed();
+            byte[] hash = hashstring.ComputeHash(buffer.GetBuffer());
+            
             publicKeyOut = new PublicKey(hash);
             return true;
         }

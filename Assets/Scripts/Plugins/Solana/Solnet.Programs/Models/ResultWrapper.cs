@@ -38,7 +38,7 @@ namespace Solnet.Programs.Models
         /// <summary>
         /// The original response to the request.
         /// </summary>
-        public RequestResult<T> OriginalRequest { get; init; }
+        public RequestResult<T> OriginalRequest { get; set; }
 
         /// <summary>
         /// The desired type of the account data.

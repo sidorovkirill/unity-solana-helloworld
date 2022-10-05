@@ -208,13 +208,13 @@ namespace Solnet.Programs.Utilities
         /// <param name="value">The <see cref="double"/> to write.</param>
         /// <param name="offset">The offset at which to write the <see cref="double"/>.</param>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when the offset is too big for the data array.</exception>
-        public static void WriteDouble(this byte[] data, double value, int offset)
-        {
-            if (offset + sizeof(double) > data.Length)
-                throw new ArgumentOutOfRangeException(nameof(offset));
-
-            BinaryPrimitives.WriteDoubleLittleEndian(data.AsSpan(offset, sizeof(double)), value);
-        }
+        // public static void WriteDouble(this byte[] data, double value, int offset)
+        // {
+        //     if (offset + sizeof(double) > data.Length)
+        //         throw new ArgumentOutOfRangeException(nameof(offset));
+        //
+        //     BinaryPrimitives.WriteDoubleLittleEndian(data.AsSpan(offset, sizeof(double)), value);
+        // }
 
         /// <summary>
         /// Write a single-precision floating-point value to the byte array at the given offset.
@@ -223,13 +223,13 @@ namespace Solnet.Programs.Utilities
         /// <param name="value">The <see cref="float"/> to write.</param>
         /// <param name="offset">The offset at which to write the <see cref="float"/>.</param>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when the offset is too big for the data array.</exception>
-        public static void WriteSingle(this byte[] data, float value, int offset)
-        {
-            if (offset + sizeof(float) > data.Length)
-                throw new ArgumentOutOfRangeException(nameof(offset));
-
-            BinaryPrimitives.WriteSingleLittleEndian(data.AsSpan(offset, sizeof(float)), value);
-        }
+        // public static void WriteSingle(this byte[] data, float value, int offset)
+        // {
+        //     if (offset + sizeof(float) > data.Length)
+        //         throw new ArgumentOutOfRangeException(nameof(offset));
+        //
+        //     BinaryPrimitives.WriteSingleLittleEndian(data.AsSpan(offset, sizeof(float)), value);
+        // }
 
         /// <summary>
         /// Write a UTF8 string value to the byte array at the given offset.

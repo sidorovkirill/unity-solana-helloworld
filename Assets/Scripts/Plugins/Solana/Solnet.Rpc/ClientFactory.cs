@@ -39,6 +39,7 @@ namespace Solnet.Rpc
         /// The main net cluster.
         /// </summary>
         private const string StreamingRpcMainNet = "wss://api.mainnet-beta.solana.com";
+        
 
         /// <summary>
         /// Instantiate a http client.
@@ -54,7 +55,6 @@ namespace Solnet.Rpc
         /// Instantiate a http client.
         /// </summary>
         /// <param name="cluster">The network cluster.</param>
-        /// <param name="logger">The logger.</param>
         /// <param name="rateLimiter">An IRateLimiter instance or null.</param>
         /// <returns>The http client.</returns>
         public static IRpcClient GetClient(
@@ -68,11 +68,11 @@ namespace Solnet.Rpc
         /// Instantiate a http client.
         /// </summary>
         /// <param name="cluster">The network cluster.</param>
-        /// <param name="logger">The logger.</param>
         /// <param name="httpClient">A HttpClient instance. If null, a new instance will be created.</param>
         /// <param name="rateLimiter">An IRateLimiter instance or null.</param>
         /// <returns>The http client.</returns>
-        public static IRpcClient GetClient(Cluster cluster, HttpClient httpClient = null, IRateLimiter rateLimiter = null)
+        public static IRpcClient GetClient(Cluster cluster,
+                HttpClient httpClient = null, IRateLimiter rateLimiter = null)
         {
             var url = cluster switch
             {
@@ -88,18 +88,16 @@ namespace Solnet.Rpc
         /// Instantiate a http client.
         /// </summary>
         /// <param name="url">The network cluster url.</param>
-        /// <param name="logger">The logger.</param>
         /// <returns>The http client.</returns>
         public static IRpcClient GetClient(string url)
         {
-            return GetClient(url);
+            return GetClient(url, null);
         }
 
         /// <summary>
         /// Instantiate a http client.
         /// </summary>
         /// <param name="url">The network cluster url.</param>
-        /// <param name="logger">The logger.</param>
         /// <param name="rateLimiter">An IRateLimiter instance or null.</param>
         /// <returns>The http client.</returns>
         public static IRpcClient GetClient(string url, IRateLimiter rateLimiter)
@@ -111,7 +109,6 @@ namespace Solnet.Rpc
         /// Instantiate a http client.
         /// </summary>
         /// <param name="url">The network cluster url.</param>
-        /// <param name="logger">The logger.</param>
         /// <param name="httpClient">A HttpClient instance. If null, a new instance will be created.</param>
         /// <param name="rateLimiter">An IRateLimiter instance or null.</param>
         /// <returns>The http client.</returns>
@@ -124,9 +121,9 @@ namespace Solnet.Rpc
         /// Instantiate a streaming client.
         /// </summary>
         /// <param name="cluster">The network cluster.</param>
-        /// <param name="logger">The logger.</param>
         /// <returns>The streaming client.</returns>
-        public static IStreamingRpcClient GetStreamingClient(Cluster cluster)
+        public static IStreamingRpcClient GetStreamingClient(
+            Cluster cluster)
         {
             var url = cluster switch
             {
@@ -141,7 +138,6 @@ namespace Solnet.Rpc
         /// Instantiate a streaming client.
         /// </summary>
         /// <param name="url">The network cluster url.</param>
-        /// <param name="logger">The logger.</param>
         /// <param name="clientWebSocket">A ClientWebSocket instance. If null, a new instance will be created.</param>
         /// <returns>The streaming client.</returns>
         public static IStreamingRpcClient GetStreamingClient(string url, ClientWebSocket clientWebSocket = null)

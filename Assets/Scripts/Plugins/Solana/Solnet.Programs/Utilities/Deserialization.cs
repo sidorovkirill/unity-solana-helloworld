@@ -179,13 +179,13 @@ namespace Solnet.Programs.Utilities
         /// <param name="offset">The offset at which the double-precision floating-point number begins.</param>
         /// <returns>The <see cref="double"/> instance that represents the value.</returns>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when the offset is too big for the span.</exception>
-        public static double GetDouble(this ReadOnlySpan<byte> data, int offset)
-        {
-            if (offset + sizeof(double) > data.Length)
-                throw new ArgumentOutOfRangeException(nameof(offset));
-
-            return BinaryPrimitives.ReadDoubleLittleEndian(data.Slice(offset, sizeof(double)));
-        }
+        // public static double GetDouble(this ReadOnlySpan<byte> data, int offset)
+        // {
+        //     if (offset + sizeof(double) > data.Length)
+        //         throw new ArgumentOutOfRangeException(nameof(offset));
+        //
+        //     return BinaryPrimitives.ReadDoubleLittleEndian(data.Slice(offset, sizeof(double)));
+        // }
 
         /// <summary>
         /// Get a single-precision floating-point number from the span at the given offset.
@@ -194,13 +194,13 @@ namespace Solnet.Programs.Utilities
         /// <param name="offset">The offset at which the single-precision floating-point number begins.</param>
         /// <returns>The <see cref="float"/> instance that represents the value.</returns>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when the offset is too big for the span.</exception>
-        public static float GetSingle(this ReadOnlySpan<byte> data, int offset)
-        {
-            if (offset + sizeof(float) > data.Length)
-                throw new ArgumentOutOfRangeException(nameof(offset));
-
-            return BinaryPrimitives.ReadSingleLittleEndian(data.Slice(offset, sizeof(float)));
-        }
+        // public static float GetSingle(this ReadOnlySpan<byte> data, int offset)
+        // {
+        //     if (offset + sizeof(float) > data.Length)
+        //         throw new ArgumentOutOfRangeException(nameof(offset));
+        //
+        //     return BinaryPrimitives.ReadSingleLittleEndian(data.Slice(offset, sizeof(float)));
+        // }
 
 
         /// <summary>

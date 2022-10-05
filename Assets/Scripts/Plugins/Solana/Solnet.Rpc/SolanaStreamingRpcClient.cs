@@ -7,22 +7,22 @@ using Solnet.Rpc.Models;
 using Solnet.Rpc.Types;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Net.WebSockets;
 using System.Text;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using System.Threading;
 using System.Threading.Tasks;
-using Logger = UnityEngine.Debug;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Serialization;
+using UnityEngine;
 
 namespace Solnet.Rpc
 {
     /// <summary>
     /// Implementation of the Solana streaming RPC API abstraction client.
     /// </summary>
-    [DebuggerDisplay("Cluster = {" + nameof(NodeAddress) + "}")]
     internal class SolanaStreamingRpcClient : StreamingRpcClient, IStreamingRpcClient
     {
         /// <summary>
@@ -44,7 +44,6 @@ namespace Solnet.Rpc
         /// Internal constructor.
         /// </summary>
         /// <param name="url">The url of the server to connect to.</param>
-        /// <param name="logger">The possible ILogger instance.</param>
         /// <param name="websocket">The possible IWebSocket instance.</param>
         /// <param name="clientWebSocket">The possible ClientWebSocket instance.</param>
         internal SolanaStreamingRpcClient(string url, IWebSocket websocket = default, ClientWebSocket clientWebSocket = default) : base(url, websocket, clientWebSocket)
@@ -71,57 +70,53 @@ namespace Solnet.Rpc
         /// <inheritdoc cref="StreamingRpcClient.HandleNewMessage(Memory{byte})"/>
         protected override void HandleNewMessage(Memory<byte> messagePayload)
         {
-            Utf8JsonReader jsonReader = new Utf8JsonReader(messagePayload.Span);
-            jsonReader.Read();
+            string str = Encoding.UTF8.GetString(messagePayload.ToArray());
+            JsonTextReader jsonReader = new JsonTextReader(new StringReader(str));
             
-            var str = Encoding.UTF8.GetString(messagePayload.Span);
-            Logger.Log($"[Received]{str}");
+            Debug.Log($"[Received]{str}");
 
             string prop = "", method = "";
             int id = -1, intResult = -1;
             bool handled = false;
             bool? boolResult = null;
 
-            Utf8JsonReader savedState = default;
+            JsonTextReader savedState = default;
 
+            // {"jsonrpc":"2.0","method":"signatureNotification","params":{"result":{"context":{"slot":153775504},"value":{"err":null}},"subscription":83076}}
             while (!handled && jsonReader.Read())
             {
                 switch (jsonReader.TokenType)
                 {
-                    case JsonTokenType.PropertyName:
-                        prop = jsonReader.GetString();
-                        if (prop == "params")
-                        {
-                            savedState = jsonReader;
-                            jsonReader.Read();
-                            jsonReader.Read();
-                            jsonReader.Skip();
-                        }
-                        else if (prop == "error")
+                    case JsonToken.PropertyName:
+                        prop = jsonReader.Value.ToString();
+                        Debug.Log("PropertyName -- " + prop);
+                        if (prop == "error")
                         {
                             HandleError(ref jsonReader);
                             handled = true;
                         }
                         break;
-                    case JsonTokenType.String:
+                    case JsonToken.String:
+                        Debug.Log("String -- " + prop);
                         if (prop == "method")
                         {
-                            method = jsonReader.GetString();
+                            method = jsonReader.Value.ToString();
                         }
                         break;
-                    case JsonTokenType.Number:
+                    case JsonToken.Integer:
+                        Debug.Log("Integer -- " + prop);
                         if (prop == "id")
                         {
-                            id = jsonReader.GetInt32();
+                            id = Convert.ToInt32(jsonReader.Value);
                         }
                         else if (prop == "result")
                         {
-                            intResult = jsonReader.GetInt32();
+                            intResult = Convert.ToInt32(jsonReader.Value);
                         }
                         else if (prop == "subscription")
                         {
-                            id = jsonReader.GetInt32();
-                            HandleDataMessage(ref savedState, method, id);
+                            id = Convert.ToInt32(jsonReader.Value);
+                            HandleDataMessage(str, method, id);
                             handled = true;
                         }
                         if (id != -1 && intResult != -1)
@@ -130,14 +125,14 @@ namespace Solnet.Rpc
                             handled = true;
                         }
                         break;
-                    case JsonTokenType.True:
-                    case JsonTokenType.False:
+                    case JsonToken.Boolean:
+                        Debug.Log("Boolean -- " + prop);
                         if (prop == "result")
                         {
                             // this is the result of an unsubscription
                             // I don't think its supposed to ever be false if we correctly manage the subscription ids
                             // maybe future followup
-                            boolResult = jsonReader.GetBoolean();
+                            boolResult = jsonReader.ReadAsBoolean();
                         }
                         break;
                 }
@@ -153,10 +148,20 @@ namespace Solnet.Rpc
         /// Handles and finishes parsing the contents of an error message.
         /// </summary>
         /// <param name="reader">The jsonReader that read the message so far.</param>
-        private void HandleError(ref Utf8JsonReader reader)
+        private void HandleError(ref JsonTextReader reader)
         {
-            JsonSerializerOptions opts = new JsonSerializerOptions() { MaxDepth = 64, PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
-            var err = JsonSerializer.Deserialize<ErrorContent>(ref reader, opts);
+            DefaultContractResolver contractResolver = new DefaultContractResolver
+            {
+                NamingStrategy = new CamelCaseNamingStrategy()
+            };
+
+            var opts = new JsonSerializerSettings
+            {
+                ContractResolver = contractResolver,
+                Formatting = Formatting.Indented
+            };
+            
+            var err = JsonConvert.DeserializeObject<ErrorContent>(reader.Value.ToString(), opts);
 
             reader.Read();
 
@@ -164,7 +169,7 @@ namespace Solnet.Rpc
 
             reader.Read();
 
-            var id = reader.GetInt32();
+            var id = Convert.ToInt32(reader.ReadAsInt32());;
 
             var sub = RemoveUnconfirmedSubscription(id);
 
@@ -185,7 +190,7 @@ namespace Solnet.Rpc
             {
                 if (!unconfirmedRequests.Remove(id, out sub))
                 {
-                    Logger.Log($"No unconfirmed subscription found with ID:{id}");
+                    Debug.LogError( $"No unconfirmed subscription found with ID:{id}");
                 }
             }
             return sub;
@@ -203,7 +208,7 @@ namespace Solnet.Rpc
             {
                 if (!confirmedSubscriptions.Remove(id, out sub))
                 {
-                    Logger.Log($"No subscription found with ID:{id}");
+                    Debug.LogError($"No subscription found with ID:{id}");
                 }
             }
             if (shouldNotify)
@@ -265,12 +270,20 @@ namespace Solnet.Rpc
         /// <param name="reader">The current JsonReader being used to parse the message.</param>
         /// <param name="method">The method parameter already parsed within the message.</param>
         /// <param name="subscriptionId">The subscriptionId for this message.</param>
-        private void HandleDataMessage(ref Utf8JsonReader reader, string method, int subscriptionId)
+        private void HandleDataMessage(string message, string method, int subscriptionId)
         {
-            JsonSerializerOptions opts = new JsonSerializerOptions() { MaxDepth = 64, PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
-
+            var opts = new JsonSerializerSettings
+            {
+                ContractResolver  = new DefaultContractResolver
+                {
+                    NamingStrategy = new CamelCaseNamingStrategy()
+                },
+                Formatting = Formatting.Indented
+            };
             var sub = RetrieveSubscription(subscriptionId);
 
+            var response = JsonConvert.DeserializeObject<JsonSubscriptionResponse>(message, opts);
+            
             object result = null;
 
             switch (method)
@@ -280,39 +293,40 @@ namespace Solnet.Rpc
                         if (sub.Channel == SubscriptionChannel.TokenAccount)
                         {
                             //var newReader = new Utf8JsonReader()
-                            var tokenAccNotification = JsonSerializer.Deserialize<JsonRpcStreamResponse<ResponseValue<TokenAccountInfo>>>(ref reader, opts);
+                            var tokenAccNotification = response.Params.ToObject<JsonRpcStreamResponse<ResponseValue<TokenAccountInfo>>>();
                             result = tokenAccNotification.Result;
                         }
                         else
                         {
-                            var accNotification = JsonSerializer.Deserialize<JsonRpcStreamResponse<ResponseValue<AccountInfo>>>(ref reader, opts);
+                            var accNotification = response.Params.ToObject<JsonRpcStreamResponse<ResponseValue<AccountInfo>>>();
                             result = accNotification.Result;
                         }
                         break;
                     }
                 case "logsNotification":
-                    var logsNotification = JsonSerializer.Deserialize<JsonRpcStreamResponse<ResponseValue<LogInfo>>>(ref reader, opts);
+                    var logsNotification = response.Params.ToObject<JsonRpcStreamResponse<ResponseValue<LogInfo>>>();
                     result = logsNotification.Result;
                     break;
                 case "programNotification":
-                    var programNotification = JsonSerializer.Deserialize<JsonRpcStreamResponse<ResponseValue<AccountKeyPair>>>(ref reader, opts);
+                    var programNotification = response.Params.ToObject<JsonRpcStreamResponse<ResponseValue<AccountKeyPair>>>();
                     result = programNotification.Result; 
                     break;
                 case "signatureNotification":
-                    var signatureNotification = JsonSerializer.Deserialize<JsonRpcStreamResponse<ResponseValue<ErrorResult>>>(ref reader, opts);
+                    var signatureNotification = response.Params.ToObject<JsonRpcStreamResponse<ResponseValue<ErrorResult>>>();
+                    Debug.Log("!!! result !!! ->" + JsonConvert.SerializeObject(signatureNotification));
                     result = signatureNotification.Result;
                     RemoveSubscription(signatureNotification.Subscription, true);
                     break;
                 case "slotNotification":
-                    var slotNotification = JsonSerializer.Deserialize<JsonRpcStreamResponse<SlotInfo>>(ref reader, opts);
+                    var slotNotification = response.Params.ToObject<JsonRpcStreamResponse<SlotInfo>>();
                     result = slotNotification.Result;
                     break;
                 case "rootNotification":
-                    var rootNotification = JsonSerializer.Deserialize<JsonRpcStreamResponse<int>>(ref reader, opts);
+                    var rootNotification = response.Params.ToObject<JsonRpcStreamResponse<int>>();
                     result = rootNotification.Result;
                     break;
             }
-
+            
             sub.HandleData(result);
         }
 
@@ -509,22 +523,26 @@ namespace Solnet.Rpc
         /// <returns>A task representing the state of the asynchronous operation-</returns>
         private async Task<SubscriptionState> Subscribe(SubscriptionState sub, JsonRpcRequest msg)
         {
-            var json = JsonSerializer.SerializeToUtf8Bytes(msg, new JsonSerializerOptions
+            var encodingConverter = new EncodingConverter();
+            var enumConverter = new StringEnumConverter(new CamelCaseNamingStrategy());
+            DefaultContractResolver contractResolver = new DefaultContractResolver
             {
-                WriteIndented = false,
-                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-                Converters =
-                {
-                    new EncodingConverter(),
-                    new JsonStringEnumConverter(JsonNamingPolicy.CamelCase)
-                }
-            });
+                NamingStrategy = new CamelCaseNamingStrategy()
+            };
 
+            var opts = new JsonSerializerSettings
+            {
+                ContractResolver = contractResolver,
+                Formatting = Formatting.Indented,
+                Converters = new List<JsonConverter> { encodingConverter, enumConverter } 
+            };
 
-            var jsonString = Encoding.UTF8.GetString(json);
-            Logger.Log($"[Sending]{jsonString}");
+            var jsonString = JsonConvert.SerializeObject(msg, opts);
+            
+            Debug.Log($"[Sending]{jsonString}");
 
-            ReadOnlyMemory<byte> mem = new ReadOnlyMemory<byte>(json);
+            var json = Encoding.UTF8.GetBytes(jsonString);
+            ArraySegment<byte> mem = new ArraySegment<byte>(json);
 
             try
             {
@@ -534,8 +552,8 @@ namespace Solnet.Rpc
             catch (Exception e)
             {
                 sub.ChangeState(SubscriptionStatus.ErrorSubscribing, e.Message);
-                Logger.LogError( $"Unable to send message");
-                Logger.LogException(e);
+                Debug.Log( $"Unable to send message");
+                Debug.LogException(e);
             }
 
             return sub;

@@ -3,8 +3,8 @@ using Solnet.KeyStore.Services;
 using System;
 using System.IO;
 using System.Runtime.Serialization;
-using System.Text.Json;
-using JsonSerializer = System.Text.Json.JsonSerializer;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Solnet.KeyStore
 {
@@ -31,13 +31,13 @@ namespace Solnet.KeyStore
         public static string GetAddressFromKeyStore(string json)
         {
             if (json == null) throw new ArgumentNullException(nameof(json));
-            var keyStoreDocument = JsonSerializer.Deserialize<JsonDocument>(json);
+            var keyStoreDocument = JObject.Parse(json);
             if (keyStoreDocument == null) throw new SerializationException("could not process json");
 
-            var addrExist = keyStoreDocument.RootElement.TryGetProperty("address", out var address);
+            var addrExist = keyStoreDocument.TryGetValue("address", out var address);
             if (!addrExist) throw new JsonException("could not get address from json");
 
-            return address.GetString();
+            return address.ToString();
         }
 
         public static string GenerateUtcFileName(string address)

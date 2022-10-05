@@ -36,12 +36,12 @@ namespace Solnet.Extensions
         /// <summary>
         /// How many lamports does this balance represent.
         /// </summary>
-        public ulong Lamports { get; init; }
+        public ulong Lamports { get; set; }
 
         /// <summary>
         /// The number of accounts this balance represents. 
         /// </summary>
-        public int AccountCount { get; init; }
+        public int AccountCount { get; set; }
 
         /// <summary>
         /// Provide a friendly to read balance with symbol and name.

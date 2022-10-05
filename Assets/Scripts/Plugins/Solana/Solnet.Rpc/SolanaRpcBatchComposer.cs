@@ -1,15 +1,11 @@
-﻿using Solnet.Rpc.Core;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using Solnet.Rpc.Core.Http;
 using Solnet.Rpc.Messages;
-using Solnet.Rpc.Models;
 using Solnet.Rpc.Types;
 using System;
-using System.Buffers;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Solnet.Rpc
@@ -33,7 +29,7 @@ namespace Solnet.Rpc
         /// <summary>
         /// JSON serializer options
         /// </summary>
-        private JsonSerializerOptions _jsonOptions;
+        private JsonSerializerSettings _jsonOptions;
 
         /// <summary>
         /// How many requests are in this batch
@@ -58,13 +54,15 @@ namespace Solnet.Rpc
         {
             _rpcClient = rpcClient ?? throw new ArgumentNullException(nameof(rpcClient));
             _reqs = new List<RpcBatchReqRespItem>();
-            _jsonOptions = new JsonSerializerOptions
+            
+            var contractResolver = new DefaultContractResolver
             {
-                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-                Converters =
-                {
-                    new JsonStringEnumConverter(JsonNamingPolicy.CamelCase)
-                }
+                NamingStrategy = new CamelCaseNamingStrategy()
+            };
+            _jsonOptions = new JsonSerializerSettings
+            {
+                ContractResolver = contractResolver,
+                Formatting = Formatting.Indented
             };
         }
 
@@ -274,19 +272,20 @@ namespace Solnet.Rpc
         /// <returns></returns>
         public object MapJsonTypeToNativeType(object input, Type nativeType)
         {
-            if (input is JsonElement)
-            {
-                // serializes + deserializes the JSON into runtime type - suboptimal but expedient
-                var elem = (JsonElement)input;
-                var bufferWriter = new ArrayBufferWriter<byte>();
-                using (var writer = new Utf8JsonWriter(bufferWriter))
-                    elem.WriteTo(writer);
-                return JsonSerializer.Deserialize(bufferWriter.WrittenSpan, nativeType, _jsonOptions);
-            }
-            else
-            {
+            // TODO Rewrite this logic base on examples
+            // if (input is JsonElement)
+            // {
+            //     // serializes + deserializes the JSON into runtime type - suboptimal but expedient
+            //     var elem = (JsonElement)input;
+            //     var bufferWriter = new ArrayBufferWriter<byte>();
+            //     using (var writer = new Utf8JsonWriter(bufferWriter))
+            //         elem.WriteTo(writer);
+            //     return JsonSerializer.Deserialize(bufferWriter.WrittenSpan, nativeType, _jsonOptions);
+            // }
+            // else
+            // {
                 return input;
-            }
+            // }
         }
 
         #endregion

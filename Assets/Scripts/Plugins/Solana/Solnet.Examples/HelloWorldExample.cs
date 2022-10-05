@@ -1,9 +1,9 @@
 ﻿using Solnet.Programs;
 using Solnet.Rpc;
 using Solnet.Rpc.Builders;
-using Solnet.Wallet;
 using Solnet.Wallet.Bip39;
 using System;
+using UnityEngine;
 
 namespace Solnet.Examples
 {
@@ -13,20 +13,20 @@ namespace Solnet.Examples
         {
             var wallet = new Wallet.Wallet(WordCount.TwentyFour, WordList.English);
 
-            Console.WriteLine("Hello World!");
-            Console.WriteLine($"Mnemonic: {wallet.Mnemonic}");
-            Console.WriteLine($"PubKey: {wallet.Account.PublicKey.Key}");
-            Console.WriteLine($"PrivateKey: {wallet.Account.PrivateKey.Key}");
+            Debug.Log("Hello World!");
+            Debug.Log($"Mnemonic: {wallet.Mnemonic}");
+            Debug.Log($"PubKey: {wallet.Account.PublicKey.Key}");
+            Debug.Log($"PrivateKey: {wallet.Account.PrivateKey.Key}");
 
             IRpcClient rpcClient = ClientFactory.GetClient(Cluster.TestNet);
 
             var balance = rpcClient.GetBalance(wallet.Account.PublicKey);
 
-            Console.WriteLine($"Balance: {balance.Result.Value}");
+            Debug.Log($"Balance: {balance.Result.Value}");
 
             var transactionHash = rpcClient.RequestAirdrop(wallet.Account.PublicKey, 100_000_000);
 
-            Console.WriteLine($"TxHash: {transactionHash.Result}");
+            Debug.Log($"TxHash: {transactionHash.Result}");
 
             IStreamingRpcClient streamingRpcClient = ClientFactory.GetStreamingClient(Cluster.TestNet);
 
@@ -38,7 +38,7 @@ namespace Solnet.Examples
                 {
                     var balance = rpcClient.GetBalance(wallet.Account.PublicKey);
 
-                    Console.WriteLine($"Balance: {balance.Result.Value}");
+                    Debug.Log($"Balance: {balance.Result.Value}");
 
                     var memoInstruction = MemoProgram.NewMemoV2("Hello Solana World, using Solnet :)");
 
@@ -49,11 +49,11 @@ namespace Solnet.Examples
 
                     var txHash = rpcClient.SendTransaction(tx);
 
-                    Console.WriteLine($"TxHash: {txHash.Result}");
+                    Debug.Log($"TxHash: {txHash.Result}");
                 }
                 else
                 {
-                    Console.WriteLine($"Transaction error: {data.Value.Error.Type}");
+                    Debug.Log($"Transaction error: {data.Value.Error.Type}");
                 }
             });
 

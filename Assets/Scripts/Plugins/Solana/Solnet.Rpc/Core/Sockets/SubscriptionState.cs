@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.Immutable;
 using System.Threading.Tasks;
 
 namespace Solnet.Rpc.Core.Sockets
@@ -43,7 +42,7 @@ namespace Solnet.Rpc.Core.Sockets
         /// <summary>
         /// The collection of parameters that were submitted for this subscription.
         /// </summary>
-        public ImmutableList<object> AdditionalParameters { get; protected set; }
+        public List<object> AdditionalParameters { get; protected set; }
 
         /// <summary>
         /// Event fired when the state of the subcription changes.
@@ -60,7 +59,7 @@ namespace Solnet.Rpc.Core.Sockets
         {
             _rpcClient = rpcClient;
             Channel = chan;
-            AdditionalParameters = additionalParameters?.ToImmutableList();
+            AdditionalParameters = (List<object>)additionalParameters;
         }
 
         /// <summary>

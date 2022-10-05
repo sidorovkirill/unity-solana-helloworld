@@ -26,13 +26,13 @@ namespace Solnet.Rpc
         public static async Task<ResponseValue<ErrorResult>> ConfirmTransaction(IRpcClient rpc, IStreamingRpcClient streamingRpcClient, 
             string hash, ulong validBlockHeight, Commitment commitment = Commitment.Finalized)
         {
-            TaskCompletionSource t = new();
+            TaskCompletionSource<bool> t = new TaskCompletionSource<bool>();
             ResponseValue<ErrorResult> result = null;
 
             var s = await streamingRpcClient.SubscribeSignatureAsync(hash, (s, e) =>
             {
                 result = e;
-                t.SetResult();
+                t.SetResult(true);
             },
             commitment);
 
@@ -68,13 +68,13 @@ namespace Solnet.Rpc
         public static async Task<ResponseValue<ErrorResult>> ConfirmTransaction(IRpcClient rpc, IStreamingRpcClient streamingRpcClient,
             string hash, Commitment commitment = Commitment.Finalized)
         {
-            TaskCompletionSource t = new();
+            TaskCompletionSource<bool> t = new TaskCompletionSource<bool>();
             ResponseValue<ErrorResult> result = null;
 
             var s = await streamingRpcClient.SubscribeSignatureAsync(hash, (s, e) =>
             {
                 result = e;
-                t.SetResult();
+                t.SetResult(true);
             },
             commitment);
 

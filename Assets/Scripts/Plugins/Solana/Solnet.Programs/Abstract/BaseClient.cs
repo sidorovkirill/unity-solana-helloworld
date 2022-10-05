@@ -29,12 +29,12 @@ namespace Solnet.Programs.Abstract
         /// <summary>
         /// The RPC client.
         /// </summary>
-        public IRpcClient RpcClient { get; init; }
+        public IRpcClient RpcClient { get; set; }
 
         /// <summary>
         /// The streaming RPC client.
         /// </summary>
-        public IStreamingRpcClient StreamingRpcClient { get; init; }
+        public IStreamingRpcClient StreamingRpcClient { get; set; }
 
         /// <summary>
         /// Initialize the base client with the given RPC clients.

@@ -32,37 +32,37 @@ namespace Solnet.Extensions.TokenMint
         /// <summary>
         /// The public key of the token mint address.
         /// </summary>
-        public string TokenMint { get; init; }
+        public string TokenMint { get; set; }
 
         /// <summary>
         /// The display name of this token, either user supplied or loaded from tokenlist.json
         /// </summary>
-        public string TokenName { get; init; }
+        public string TokenName { get; set; }
 
         /// <summary>
         /// The symbol to use when displaying balances of this token to a user.
         /// </summary>
-        public string Symbol { get; init; }
+        public string Symbol { get; set; }
 
         /// <summary>
         /// The number of decimal places this token uses.
         /// </summary>
-        public int DecimalPlaces { get; init; }
+        public int DecimalPlaces { get; set; }
 
         /// <summary>
         /// The Coingecko identifier as supplied by the standard Solana token list or null
         /// </summary>
-        public string CoinGeckoId { get; init; }
+        public string CoinGeckoId { get; set; }
 
         /// <summary>
         /// The token project / more info url as supplied by the standard Solana token list or null
         /// </summary>
-        public string TokenProjectUrl { get; init; }
+        public string TokenProjectUrl { get; set; }
 
         /// <summary>
         /// The token logo url as supplied by the standard Solana token list or null
         /// </summary>
-        public string TokenLogoUrl { get; init; }
+        public string TokenLogoUrl { get; set; }
 
         /// <summary>
         /// Create an instance of the TokenQuantity object with the raw token quanity value provided.

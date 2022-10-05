@@ -35,37 +35,37 @@ namespace Solnet.Extensions
         /// <summary>
         /// The origin TokenDef instance
         /// </summary>
-        public TokenDef TokenDef { get; init; }
+        public TokenDef TokenDef { get; set; }
 
         /// <summary>
         /// The token mint public key address.
         /// </summary>
-        public string TokenMint { get; init; }
+        public string TokenMint { get; set; }
 
         /// <summary>
         /// The symbol this token uses.
         /// </summary>
-        public string Symbol { get; init; }
+        public string Symbol { get; set; }
 
         /// <summary>
         /// The name of this token.
         /// </summary>
-        public string TokenName { get; init; }
+        public string TokenName { get; set; }
 
         /// <summary>
         /// The number of decimal places this token uses.
         /// </summary>
-        public int DecimalPlaces { get; init; }
+        public int DecimalPlaces { get; set; }
 
         /// <summary>
         /// Token balance in decimal.
         /// </summary>
-        public decimal QuantityDecimal { get; init; }
+        public decimal QuantityDecimal { get; set; }
 
         /// <summary>
         /// Token balance in raw ulong.
         /// </summary>
-        public ulong QuantityRaw { get; init; }
+        public ulong QuantityRaw { get; set; }
 
         /// <summary>
         /// Provide a friendly to read balance with symbol and name.

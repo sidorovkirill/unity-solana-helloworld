@@ -1,38 +1,35 @@
-﻿using Solnet.Rpc.Types;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
+
 
 namespace Solnet.Rpc.Converters
 {
-    /// <inheritdoc/>
-    public class AccountDataConverter : JsonConverter<List<string>>
-    {
-        /// <inheritdoc/>
-        public override List<string> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
-        {
-            if (reader.TokenType == JsonTokenType.StartArray)
-                return JsonSerializer.Deserialize<List<string>>(ref reader, options);
+	/// <inheritdoc/>
+	public class AccountDataConverter : JsonConverter<List<string>>
+	{
+		/// <inheritdoc/>
+		public override List<string> ReadJson(JsonReader reader, Type objectType, List<string> existingValue, bool hasExistingValue, JsonSerializer serializer)
+		{
+			if (reader.TokenType == JsonToken.StartArray)
+				return serializer.Deserialize<List<string>>(reader);
 
-            if(reader.TokenType == JsonTokenType.StartObject)
-            {
-                JsonDocument doc = JsonDocument.ParseValue(ref reader);
-                var jsonAsString = doc.RootElement.ToString();
+			if(reader.TokenType == JsonToken.StartObject)
+			{
+				var token = JToken.FromObject(reader);
+				var jsonAsString = token.Root.ToString();
 
-                return new List<string>() { jsonAsString, "jsonParsed" };
-            }
+				return new List<string>() { jsonAsString, "jsonParsed" };
+			}
 
-            throw new JsonException("Unable to parse account data");
-        }
+			throw new JsonException("Unable to parse account data");
+		}
 
-        /// <inheritdoc/>
-        public override void Write(Utf8JsonWriter writer, List<string> value, JsonSerializerOptions options)
-        {
-            throw new NotImplementedException();
-        }
-    }
+		/// <inheritdoc/>
+		public override void WriteJson(JsonWriter writer, List<string> value, JsonSerializer serializer)
+		{
+			throw new NotImplementedException();
+		}
+	}
 }

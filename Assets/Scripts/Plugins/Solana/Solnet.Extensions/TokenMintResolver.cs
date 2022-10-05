@@ -6,6 +6,8 @@ using System.Net;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Solnet.Extensions
 {
@@ -102,8 +104,7 @@ namespace Solnet.Extensions
         public static TokenMintResolver ParseTokenList(string json)
         {
             if (json is null) throw new ArgumentNullException(nameof(json));
-            var options = new JsonSerializerOptions(JsonSerializerDefaults.Web);
-            var tokenList = JsonSerializer.Deserialize<TokenListDoc>(json, options);
+            var tokenList = JsonConvert.DeserializeObject<TokenListDoc>(json);
             return new TokenMintResolver(tokenList);
         }
 
@@ -160,11 +161,17 @@ namespace Solnet.Extensions
 
             // pick out the coingecko identifier if available
             string coingeckoId = null;
-            if (tokenItem.Extensions?.ContainsKey("coingeckoId") ?? false) coingeckoId = ((JsonElement) tokenItem.Extensions["coingeckoId"]).GetString();
+            if (tokenItem.Extensions?.ContainsKey("coingeckoId") ?? false)
+            {
+                coingeckoId = ((JToken)tokenItem.Extensions["coingeckoId"]).ToString();
+            }
 
             // pick out the project website if available
             string projectUrl = null;
-            if (tokenItem.Extensions?.ContainsKey("website") ?? false) projectUrl = ((JsonElement)tokenItem.Extensions["website"]).GetString();
+            if (tokenItem.Extensions?.ContainsKey("website") ?? false)
+            {
+                projectUrl = ((JToken)tokenItem.Extensions["website"]).ToString();
+            }
 
             // construct the TokenDef instance
             var token = new TokenDef(tokenItem.Address, tokenItem.Name, tokenItem.Symbol, tokenItem.Decimals)

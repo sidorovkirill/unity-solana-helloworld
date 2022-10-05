@@ -26,17 +26,17 @@ namespace Solnet.Extensions
         /// <summary>
         /// RPC client instance
         /// </summary>
-        private ITokenWalletRpcProxy RpcClient { get; init; }
+        private ITokenWalletRpcProxy RpcClient { get; set; }
 
         /// <summary>
         /// Resolver for token mint
         /// </summary>
-        private ITokenMintResolver MintResolver { get; init; }
+        private ITokenMintResolver MintResolver { get; set; }
 
         /// <summary>
         /// PublicKey for the wallet
         /// </summary>
-        public PublicKey PublicKey { get; init; }
+        public PublicKey PublicKey { get; set; }
 
         /// <summary>
         /// Cache of computed ATAs for mints

@@ -14,7 +14,7 @@ namespace Solnet.KeyStore
         /// <returns>The corresponding byte array.</returns>
         private static byte[] HexToByteArrayInternal(string value)
         {
-            return Convert.FromHexString(value);
+            return value.HexToByteArray();
         }
 
         /// <summary>

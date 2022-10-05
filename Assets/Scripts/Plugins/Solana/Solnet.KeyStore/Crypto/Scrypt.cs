@@ -2,6 +2,7 @@ using Org.BouncyCastle.Crypto;
 using Org.BouncyCastle.Crypto.Digests;
 using Org.BouncyCastle.Crypto.Generators;
 using Org.BouncyCastle.Crypto.Parameters;
+using Unity.Collections.LowLevel.Unsafe;
 
 namespace Solnet.KeyStore.Crypto
 {
@@ -46,7 +47,7 @@ namespace Solnet.KeyStore.Crypto
         /// </summary>
         private static unsafe void BulkCopy(void* dst, void* src, int len)
         {
-            System.Runtime.CompilerServices.Unsafe.CopyBlock(dst, src,(uint) len);
+            UnsafeUtility.MemCpy(dst, src,(uint) len);
         }
 
         /// <summary>

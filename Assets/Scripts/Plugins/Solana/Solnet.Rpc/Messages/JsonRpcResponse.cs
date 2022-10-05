@@ -1,7 +1,7 @@
-﻿using Solnet.Rpc.Converters;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using Solnet.Rpc.Converters;
 using Solnet.Rpc.Models;
-using System.Collections.Generic;
-using System.Text.Json.Serialization;
 
 namespace Solnet.Rpc.Messages
 {
@@ -15,6 +15,19 @@ namespace Solnet.Rpc.Messages
         /// The result of a given request.
         /// </summary>
         public T Result { get; set; }
+    }
+    
+    public class JsonSubscriptionResponse : JsonRpcBase
+    {
+        /// <summary>
+        /// Notification method
+        /// </summary>
+        public string Method { get; set; }
+        
+        /// <summary>
+        /// Params in context of the method
+        /// </summary>
+        public JObject Params { get; set; }
     }
 
     /// <summary>

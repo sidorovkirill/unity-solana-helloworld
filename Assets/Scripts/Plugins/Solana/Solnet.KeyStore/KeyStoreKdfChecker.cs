@@ -3,7 +3,8 @@ using Solnet.KeyStore.Model;
 using Solnet.KeyStore.Services;
 using System;
 using System.Runtime.Serialization;
-using System.Text.Json;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Solnet.KeyStore
 {
@@ -18,15 +19,18 @@ namespace Solnet.KeyStore
         /// <param name="keyStoreDocument">The json document.</param>
         /// <returns>The kdf type string.</returns>
         /// <exception cref="JsonException">Throws exception when json property <c>crypto</c> or <c>kdf</c> couldn't be found</exception>
-        private static string GetKdfTypeFromJson(JsonDocument keyStoreDocument)
+        private static string GetKdfTypeFromJson(JObject keyStoreDocument)
         {
-            var cryptoObjExist = keyStoreDocument.RootElement.TryGetProperty("crypto", out var cryptoObj);
-            if (!cryptoObjExist) throw new JsonException("could not get crypto params object from json");
+            var cryptoObjExist = keyStoreDocument.TryGetValue("crypto", out var cryptoObj);
+            if (!cryptoObjExist)
+            {
+                throw new JsonException("could not get crypto params object from json");
+            }
 
-            var kdfObjExist = cryptoObj.TryGetProperty("kdf", out var kdfObj);
+            var kdfObjExist = ((JObject)cryptoObj).TryGetValue("kdf", out var kdfObj);
             if (!kdfObjExist) throw new JsonException("could not get kdf object from json");
 
-            return kdfObj.GetString();
+            return kdfObj.ToString();
         }
 
         /// <summary>
@@ -41,7 +45,7 @@ namespace Solnet.KeyStore
         public static KdfType GetKeyStoreKdfType(string json)
         {
             if (json == null) throw new ArgumentNullException(nameof(json));
-            var keyStoreDocument = JsonSerializer.Deserialize<JsonDocument>(json);
+            var keyStoreDocument = JObject.Parse(json);
             if (keyStoreDocument == null) throw new SerializationException("could not process json");
 
             var kdfString = GetKdfTypeFromJson(keyStoreDocument);

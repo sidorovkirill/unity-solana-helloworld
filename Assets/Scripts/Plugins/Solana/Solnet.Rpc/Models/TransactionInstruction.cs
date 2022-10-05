@@ -12,17 +12,17 @@ namespace Solnet.Rpc.Models
         /// <summary>
         /// The program ID associated with the instruction.
         /// </summary>
-        public byte[] ProgramId { get; init; }
+        public byte[] ProgramId { get; set; }
 
         /// <summary>
         /// The keys associated with the instruction.
         /// </summary>
-        public IList<AccountMeta> Keys { get; init; }
+        public IList<AccountMeta> Keys { get; set; }
 
         /// <summary>
         /// The instruction-specific data.
         /// </summary>
-        public byte[] Data { get; init; }
+        public byte[] Data { get; set; }
     }
 
     /// <summary>
@@ -48,27 +48,27 @@ namespace Solnet.Rpc.Models
         /// <summary>
         /// The index of the program's key in the transaction's account keys.
         /// </summary>
-        public byte ProgramIdIndex { get; init; }
+        public byte ProgramIdIndex { get; set; }
 
         /// <summary>
         /// The <see cref="ShortVectorEncoding"/> encoded length representing the number of key indices.
         /// </summary>
-        public byte[] KeyIndicesCount { get; init; }
+        public byte[] KeyIndicesCount { get; set; }
 
         /// <summary>
         /// The indices of the account keys for the instruction as they appear in the transaction.
         /// </summary>
-        public byte[] KeyIndices { get; init; }
+        public byte[] KeyIndices { get; set; }
 
         /// <summary>
         /// The <see cref="ShortVectorEncoding"/> encoded length representing the number of key indices.
         /// </summary>
-        public byte[] DataLength { get; init; }
+        public byte[] DataLength { get; set; }
 
         /// <summary>
         /// The instruction data.
         /// </summary>
-        public byte[] Data { get; init; }
+        public byte[] Data { get; set; }
 
         /// <summary>
         /// Get the length of the compiled instruction.

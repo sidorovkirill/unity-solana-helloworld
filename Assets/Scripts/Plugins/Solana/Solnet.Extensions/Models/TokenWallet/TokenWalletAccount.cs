@@ -16,17 +16,17 @@ namespace Solnet.Extensions
         /// <summary>
         /// The public key of the account.
         /// </summary>
-        public string PublicKey { get; init; }
+        public string PublicKey { get; set; }
 
         /// <summary>
         /// The owner public key of the account.
         /// </summary>
-        public string Owner { get; init; }
+        public string Owner { get; set; }
 
         /// <summary>
         /// A flag to indicate whether this account is an Associated Token Account.
         /// </summary>
-        public bool IsAssociatedTokenAccount { get; init; }
+        public bool IsAssociatedTokenAccount { get; set; }
 
         /// <summary>
         /// Construct an instance of the TokenWalletAccount.

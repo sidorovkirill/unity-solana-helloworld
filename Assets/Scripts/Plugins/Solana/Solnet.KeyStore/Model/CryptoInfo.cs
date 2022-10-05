@@ -1,4 +1,5 @@
 using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace Solnet.KeyStore.Model
 {
@@ -20,33 +21,33 @@ namespace Solnet.KeyStore.Model
             Kdf = kdfType;
         }
 
-        [JsonPropertyName("cipher")]
+        [JsonProperty(PropertyName = "cipher")]
         // ReSharper disable once MemberCanBePrivate.Global
         // ReSharper disable once UnusedAutoPropertyAccessor.Global
         public string Cipher { get; }
 
-        [JsonPropertyName("ciphertext")]
+        [JsonProperty(PropertyName = "ciphertext")]
         // ReSharper disable once MemberCanBePrivate.Global
-        public string CipherText { get; init; }
+        public string CipherText { get; set; }
 
         // ReSharper disable once StringLiteralTypo
-        [JsonPropertyName("cipherparams")]
+        [JsonProperty(PropertyName = "cipherparams")]
         // ReSharper disable once MemberCanBePrivate.Global
-        public CipherParams CipherParams { get; init; }
+        public CipherParams CipherParams { get; set; }
 
-        [JsonPropertyName("kdf")]
+        [JsonProperty(PropertyName = "kdf")]
         // ReSharper disable once MemberCanBePrivate.Global
         // ReSharper disable once UnusedAutoPropertyAccessor.Global
         public string Kdf { get; }
 
-        [JsonPropertyName("mac")]
+        [JsonProperty(PropertyName = "mac")]
         // ReSharper disable once MemberCanBePrivate.Global
-        public string Mac { get; init; }
+        public string Mac { get; set; }
 
         // ReSharper disable once StringLiteralTypo
-        [JsonPropertyName("kdfparams")]
+        [JsonProperty(PropertyName = "kdfparams")]
         // ReSharper disable once IdentifierTypo
         // ReSharper disable once MemberCanBePrivate.Global
-        public TKdfParams Kdfparams { get; init; }
+        public TKdfParams Kdfparams { get; set; }
     }
 }

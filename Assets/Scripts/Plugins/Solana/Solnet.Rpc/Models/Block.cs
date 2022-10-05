@@ -2,6 +2,7 @@
 // ReSharper disable ClassNeverInstantiated.Global
 
 using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace Solnet.Rpc.Models
 {
@@ -210,7 +211,7 @@ namespace Solnet.Rpc.Models
         /// <summary>
         /// Possible transaction error.
         /// </summary>
-        [JsonPropertyName("err")]
+        [JsonProperty(PropertyName = "err")]
         public TransactionError Error { get; set; }
 
         /// <summary>

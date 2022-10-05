@@ -4,7 +4,7 @@ using System.IO;
 using System.Net.WebSockets;
 using System.Threading;
 using System.Threading.Tasks;
-using Logger = UnityEngine.Debug;
+using UnityEngine;
 
 namespace Solnet.Rpc.Core.Sockets
 {
@@ -42,7 +42,6 @@ namespace Solnet.Rpc.Core.Sockets
         /// The internal constructor that setups the client.
         /// </summary>
         /// <param name="url">The url of the streaming RPC server.</param>
-        /// <param name="logger">The possible logger instance.</param>
         /// <param name="socket">The possible websocket instance. A new instance will be created if null.</param>
         /// <param name="clientWebSocket">The possible ClientWebSocket instance. A new instance will be created if null.</param>
         protected StreamingRpcClient(string url, IWebSocket socket = default, ClientWebSocket clientWebSocket = default)
@@ -114,11 +113,11 @@ namespace Solnet.Rpc.Core.Sockets
                 }
                 catch (Exception e)
                 {
-                    Logger.LogError( "Exception trying to read next message.");
-                    Logger.LogException(e);
+                    Debug.LogError( "Exception trying to read next message.");
+                    Debug.LogException(e);
                 }
             }
-            Logger.LogWarning($"Stopped reading messages. ClientSocket.State changed to {ClientSocket.State}");
+            Debug.Log($"Stopped reading messages. ClientSocket.State changed to {ClientSocket.State}");
             ConnectionStateChangedEvent?.Invoke(this, State);
         }
 

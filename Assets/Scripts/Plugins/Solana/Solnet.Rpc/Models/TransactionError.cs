@@ -1,5 +1,5 @@
-﻿using Solnet.Rpc.Converters;
-using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
+using Solnet.Rpc.Converters;
 
 namespace Solnet.Rpc.Models
 {
