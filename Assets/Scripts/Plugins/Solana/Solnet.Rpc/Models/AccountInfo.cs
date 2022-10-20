@@ -2,7 +2,6 @@
 // ReSharper disable ClassNeverInstantiated.Global
 using Solnet.Rpc.Converters;
 using System.Collections.Generic;
-using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 
 namespace Solnet.Rpc.Models

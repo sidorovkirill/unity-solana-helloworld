@@ -26,7 +26,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\Assembly-CSharp\</OutputPath>
-    <DefineConstants>UNITY_2021_3_8;UNITY_2021_3;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;USE_SEARCH_TABLE;USE_SEARCH_MODULE;USE_PROPERTY_DATABASE;USE_SEARCH_EXTENSION_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_OSX;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_SPATIALTRACKING;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>UNITY_2021_3_8;UNITY_2021_3;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;USE_SEARCH_TABLE;USE_SEARCH_MODULE;USE_PROPERTY_DATABASE;USE_SEARCH_EXTENSION_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_ANDROID;TEXTCORE_1_0_OR_NEWER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;ENABLE_ETC_COMPRESSION;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169,0649</NoWarn>
@@ -45,35 +45,21 @@
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/SolanaStreamingRpcClient.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/fe_mul121666.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/TokenProgramData.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetDSDifficultyResponse.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetTransactionStatusResponse.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/base2.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/ge_sub.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/src/Base58Encoding.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Examples/StakeExample.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/Abstract/ByteFlag.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Wallet/Ed25519Bip32.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.KeyStore/Model/KdfParams.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.KeyStore/SecretKeyStoreService.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Blockchain/GetPrevDifficulty.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Models/ErrorResult.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/fe_pow22523.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/SysVars.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/graphQl-client/Scripts/EventCallbacks/AllEventInfo.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Wallet/AdminsArgs.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Blockchain/TxBlockListing.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Models/AccountInfo.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Payloads/GetTxBlockPayload.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Examples/ExampleHelpers.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Blockchain/TxBlockRate.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/JsonConverters/ObjectIdConverter.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Payloads/GetLatestDSBlockPayload.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/d.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Models/InstructionError.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Examples/MultisigExamples.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Crypto/Bech32.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Wallet/Balance.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Core/Indexer.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Messages/JsonRpcBatchResponse.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Examples/HelloWorldExample.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/AssociatedTokenAccountProgram.cs" />
@@ -81,7 +67,6 @@
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Ed25519.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Messages/JsonRpcBase.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Messages/JsonRpcStreamResponse.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetLatestDSBlockResponse.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Examples/SolanaKeygenKeyGeneration.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/SolanaRpcBatchWithCallbacks.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/Models/NameService/TokenNameRecord.cs" />
@@ -90,55 +75,35 @@
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/Abstract/Program.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Types/BatchRequestException.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Builders/MessageBuilder.cs" />
-     <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Models/Inflation.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/fe_add.cs" />
+     <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Models/Inflation.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.KeyStore/Crypto/IRandomBytesGenerator.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Wallet/PBKDF2Wrapper.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetSmartContractInitResponse.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Crypto/MicroBlock.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.KeyStore/Services/KeyStorePbkdf2Service.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Payloads/GetSmartContractCodePayload.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Blockchain/GetTransactionRate.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Crypto/ScryptEncoder.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Examples/TransactionDecodingExample.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Examples/NameServiceProgramExamples.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Models/SlotInfo.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Models/Fees.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Array16.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Extensions/Models/TokenWallet/TokenWalletFilterList.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Wallet/Validation.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Models/AccountMeta.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Wallet/SeedMode.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Models/TransactionError.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetDSBlockRateResponse.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Properties/AssemblyInfoFull.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/d2.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/fe_frombytes.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/src/Base58Check/ArrayHelpers.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Wallet/AddressUtils.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Payloads/GetSmartContractSubStatePayload.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetTxBlockRateResponse.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/SolanaRpcClient.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Wallet/Utilities/RandomUtils.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetStateProofResponse.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Core/IdGenerator.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/Abstract/LongFlag.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Payloads/CreateTransactionProto.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/sc_clamp.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Core/ZilliqaRPCAccount.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/Abstract/BaseClient.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Models/Message.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetDSBlockListingResponse.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/ge_p3_to_p2.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Models/Epoch.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/fe_cmov.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/Models/ResultWrapper.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Wallet/Bip39/KdTable.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Crypto/ScryptParams.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Auth/KeyStoreLogin.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/TokenSwap/Models/ConstantProductCurve.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Crypto/KDFType.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetNumDSBlocksResponse.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.KeyStore/Model/KdfType.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Extensions/Models/TokenMint/TokenDef.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/FieldElement.cs" />
@@ -148,97 +113,62 @@
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Salsa/Salsa20.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Examples/TokenSwapExample.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Extensions/ITokenWalletRpcProxy.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Contract/GetContractAddressFromTransactionID.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Blockchain/GetPrevDSDifficulty.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/NFT/GetNFTsByWalletAddress.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Blockchain/GetTotalCoinSupply.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/fe_cswap.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Messages/JsonRpcRequest.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Generic/TxHeader.cs" />
+     <Compile Include="Assets/Phantomity/Scripts/DTO/PhantomConnectDTO.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.KeyStore/Crypto/RandomBytesGenerator.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/src/Base58Check/Base58CheckEncoding.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/SharedMemoryProgram.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Crypto/KDFParams.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/ge_p3_dbl.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Account/CheckForZilliqaWallet.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Models/TokenAccount.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Models/Version.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/src/ArrayHelpers.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/Models/NameService/TokenData.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetMinerInfoResponse.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/Models/DecodedInstruction.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Converters/TransactionErrorJsonConverter.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Cluster.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Wallet/Bip39/HardcodedWordListSource.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Types/BatchAutoExecuteMode.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Payloads/GetTransactionStatusPayload.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Crypto/ScryptWrapper.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Wallet/Admins.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/SystemProgramData.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Payloads/GetTransactionsForTxBlockExPayload.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Extensions/TokenWalletException.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Poly1305.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Blockchain/GetNumTxBlocks.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/Stake/StakeProgramInstructions.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Payloads/GetsmartContractStatePayload.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.KeyStore/SolanaKeyStore.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Crypto/CryptoUtil.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Builders/TransactionInstructionFactory.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Sha512Internal.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.KeyStore/Exceptions/DecryptionException.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/Models/NameService/ReverseTwitteRecord.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/Stake/StakeProgramData.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Core/Sockets/WebSocketWrapper.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetRecentTransactionsResponse.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Types/LogsSubscriptionType.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/Models/TokenProgram/TokenAccount.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Payloads/GetTxBlockListingPayload.cs" />
-     <Compile Include="Assets\Scripts\Plugins\Phantom\Cluster.cs" />
-     <Compile Include="Assets\Scripts\Plugins\Phantom\Constants\PayloadParams.cs" />
-     <Compile Include="Assets\Scripts\Plugins\Phantom\Constants\QueryParams.cs" />
-     <Compile Include="Assets\Scripts\Plugins\Phantom\Constants\Requests.cs" />
-     <Compile Include="Assets\Scripts\Plugins\Phantom\Constants\Responses.cs" />
-     <Compile Include="Assets\Scripts\Plugins\Phantom\DeepLinkProtocol.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Crypto/ByteUtil.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.KeyStore/Model/CipherParams.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetContractAddressFromTransactionIDResponse.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Models/Performance.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/ge_msub.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Types/IConnectionStatistics.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Models/TransactionInstruction.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetNetworkIdResponse.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Models/AccountKeysList.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Crypto/Schnorr.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/Utilities/SolHelper.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Crypto/ECKeyPair.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/Models/NameService/NameRecord.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/graphQl-client/Scripts/Core/HttpHandler.cs" />
-     <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/TokenProgramInstructions.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Extensions/TokenWallet.cs" />
+     <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/TokenProgramInstructions.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/GroupElement.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Payloads/GetDSBlockPayload.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Payloads/GetNFTMetadataPayload.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/fe_neg.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.KeyStore/Crypto/Scrypt.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Extensions/Models/TokenWallet/TokenWalletAccount.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/TokenSwap/TokenSwapProgramInstructions.cs" />
-     <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/ge_tobytes.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetTransactionForTxBlockResponse.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Core/Sockets/SubscriptionChannel.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Blockchain/GetNumTransactions.cs" />
+     <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/ge_tobytes.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Core/Http/ConfigObject.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Models/Block.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/fe_tobytes.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Salsa/SalsaCore.cs" />
+     <Compile Include="Assets/Phantomity/Scripts/Constants/PayloadParams.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Core/Http/RequestResult.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/fe_isnegative.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Models/Identity.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Contract/GetSmartContractInit.cs" />
+     <Compile Include="Assets/Phantomity/Scripts/DTO/SendOptions.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Extensions/TokenMintResolver.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/ByteIntegerConverter.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/Clients/NameServiceClient.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Payloads/GetDSBlockListingPayload.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Core/ZilliqaRPCBlockchain.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Models/ClusterNode.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.KeyStore/Serialization/JsonKeyStoreScryptSerializer.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.KeyStore/Serialization/JsonKeyStorePbkdf2Serializer.cs" />
@@ -247,25 +177,13 @@
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/fe_1.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/ge_p3_0.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/IRpcClient.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetBlockchainInfoResponse.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/Models/NameService/RecordBase.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/NFT/GetFixedPriceOffers.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Types/ConnectionStats.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Payloads/GetBlockchainInfoPayload.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Crypto/BlockBody.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/TokenSwap/TokenSwapProgramData.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Blockchain/GetMinerInfo.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Wallet/PBKDF2Params.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Contract/GetStateProof.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Generic/ZilliqaMonoBehaviour.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/NameServiceInstructions.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetTotalCoinSupplyResponse.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetBalanceResponse.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Array8.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Converters/EncodingConverter.cs" />
-     <Compile Include="Assets\Scripts\Plugins\Phantom\PhantomBridge.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Extensions/ITokenMintResolver.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetTxBlockListingResponse.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Messages/JsonRpcBatchRequest.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Core/Sockets/SubscriptionEvent.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/Models/TokenProgram/TokenMint.cs" />
@@ -274,26 +192,14 @@
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/base.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Wallet/Bip39/Language.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/Utilities/Serialization.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetCurrentMiniEpochResponse.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Blockchain/GetLatestDsBlock.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Utilities/IRateLimiter.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Wallet/Wallet.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/graphQl-client/Scripts/EventCallbacks/Event.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Blockchain/GetNetworkId.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/Abstract/Flag.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Wallet/Utilities/DataEncoder.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/NFT/GetEnglishAuctionOffers.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Extensions/AsyncOpsExtensions.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Examples/TransactionBuilderExample.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Wallet/Bip39/Mnemonic.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Generic/ZilRequest.cs" />
      <Compile Include="Assets/Scripts/HelloWorld.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Crypto/KeyStoreV2.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/Abstract/ShortFlag.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetDSBlockResponse.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/ge_add.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Crypto/HashUtil.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Payloads/GetRecentTransactionsPayload.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Wallet/Wallet.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/keypair.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/TokenSwap/Models/CurveCalculator.cs" />
@@ -302,27 +208,19 @@
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Wallet/Account.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.KeyStore/Services/ISecretKeyStore.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/fe_0.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Crypto/CipherParams.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetSmartContractsResponse.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Contract/GetSmartContracts.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/TokenSwap/Models/CurveType.cs" />
+     <Compile Include="Assets/Phantomity/Scripts/Constants/Commitment.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Wallet/Bip39/WordCount.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Wallet/Utilities/Ed25519Extensions.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetSmartContractStateResponse.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Core/Sockets/IWebSocket.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/fe_sq2.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Messages/JsonRpcResponse.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Examples/IExample.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/NFT/GetNFTMetadata.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Examples/SolletKeyGeneration.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/Abstract/TransactionalBaseClient.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/Abstract/BaseProgram.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Blockchain/GetBlockchainInfo.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Generic/ZilResponse.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.KeyStore/Model/KeyStore.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Models/VoteAccount.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetSmartContractCodeResponse.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetMinimumGasPriceResponse.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/TokenSwap/TokenSwapProgram.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Converters/RpcErrorResponseConverter.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/ge_p1p1_to_p3.cs" />
@@ -333,7 +231,6 @@
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/MemoProgram.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/ClientFactory.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/TokenSwap/Models/TokenSwapAccount.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Blockchain/GetLatestTxBlock.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/ge_p2_dbl.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.KeyStore/Model/ScryptParams.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/ge_madd.cs" />
@@ -341,21 +238,14 @@
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/fe_sq.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Wallet/Utilities/BitWriter.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Models/SnapshotSlotInfo.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Payloads/GetSmartContractInitPayload.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Payloads/NFTsByUserPayload.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetTxBlockResponse.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Blockchain/GetCurrentMiniEpoch.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Properties/AssemblyInfo.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/Utilities/Deserialization.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.KeyStore/Exceptions/InvalidKdfException.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/CreateTransactionResponse.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Payloads/TransactionBlock.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/Models/NameService/RecordHeader.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/SolanaRpcBatchComposer.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Blockchain/GetDSBlockRate.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/TokenProgram.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Crypto/Signature.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.KeyStore/Services/KeyStoreServiceBase.cs" />
+     <Compile Include="Assets/Phantomity/Scripts/Constants/PhantomMethods.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Wallet/Utilities/Utils.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/fe_sub.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/fe_isnonzero.cs" />
@@ -365,26 +255,21 @@
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Core/Sockets/SubscriptionStatus.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Extensions/Models/TokenWallet/TokenWalletBalance.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/NameServiceProgram.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetTransactionsForTxBlockExResponse.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/TokenSwap/Models/SwapCurve.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Blockchain/DSBlockListing.cs" />
+     <Compile Include="Assets/Phantomity/Scripts/Constants/QueryParams.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/ge_double_scalarmult.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/OneTimeAuth.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/open.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/fe_mul.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Core/Sockets/SubscriptionState.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Crypto/Bech32Utils.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Examples/GetTokenAccountsByOwnerExample.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetCurrentDSEpochResponse.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/SystemProgram.cs" />
+     <Compile Include="Assets/Scripts/BridgeExample.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Examples/NameServiceClientExample.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Blockchain/GetTxBlock.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Core/Sockets/StreamingRpcClient.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Core/Http/JsonRpcClient.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Payloads/GetMinerInfoPayload.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Examples/SolletKeygenKeystore.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/sqrtm1.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/graphQl-client/Scripts/Core/GraphApi.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Models/AccountData.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Messages/JsonRpcBatchResponseItem.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Extensions/Models/TokenWallet/TokenQuantity.cs" />
@@ -392,48 +277,33 @@
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Utilities/RateLimiter.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.KeyStore/Crypto/KeyStoreCrypto.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/InstructionDecoder.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Wallet/TestWallets.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/sc_reduce.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Types/TransactionDetailsFilterType.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/NFTsByUserResponse.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Examples/AssociatedTokenAccountsExample.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/XSalsa20Poly1305.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.KeyStore/Model/CryptoInfo.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Crypto/Pbkdf2.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/sc_mul_add.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Types/TransactionDetails.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/sign.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Types/AccountFilterType.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/scalarmult.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/Models/TokenProgram/MultiSignatureAccount.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetNFTMetadataResponse.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Models/StakeActivation.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Crypto/KeyStore.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/ge_frombytes.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Builders/TransactionBuilder.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Models/Filters.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Sha512.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Contract/GetSmartContractCode.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/JsonConverters/GetSmartContractSubStateConverter.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Poly1305Donna.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Payloads/CreateTransactionPayload.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Payloads/GetCurrentDSEpochPayload.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Converters/AccountDataConverter.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.KeyStore/KeyStoreKdfChecker.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Generic/StaticVariables.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Utilities/ShortVectorEncoding.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Wallet/Bip39/IWordListSource.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Extensions/WellKnownTokens.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/AuthorityType.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Blockchain/GetDsBlock.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/Abstract/IntFlag.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Blockchain/GetCurrentDSEpoch.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/Core/Http/IRequestResult.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/InternalAssert.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetNumTxnsDSEpochResponse.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Blockchain/GetNumDSBlocks.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/ge_p3_tobytes.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Crypto/ZilCipher.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/MontgomeryCurve25519.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.KeyStore/Services/KeyStoreScryptService.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/IStreamingRpcClient.cs" />
@@ -441,20 +311,29 @@
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/Models/NameService/ReverseTokenNameRecord.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Wallet/PublicKey.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/fe_invert.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/graphQl-client/Scripts/Core/Introspection.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/Models/NameService/ReverseNameRecord.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Wallet/PrivateKey.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Payloads/GetSmartContractsPayload.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/ge_p1p1_to_p2.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/Responses/GetNumTxBlocksResponse.cs" />
      <Compile Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Ed25519Ref10/ge_p2_0.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Contract/GetSmartContractState.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Rpc/TransactionUtils.cs" />
-     <Compile Include="Assets/Scripts/Plugins/zilliqa-sdk/Scripts/Utils/JsonConverters/GetTransactionPayloadConverter.cs" />
      <Compile Include="Assets/Scripts/Plugins/Solana/Solnet.Programs/SystemProgramInstructions.cs" />
-     <Compile Include="Assets\Scripts\Plugins\Phantom\DeepLinkData.cs" />
-     <Compile Include="Assets\Scripts\Plugins\Phantom\DTO\PhantomConnectDTO.cs" />
-     <Compile Include="Assets\Scripts\Plugins\Phantom\PhantomBridgeVault.cs" />
+     <Compile Include="Assets/Phantomity/Scripts/Utils/PhantomErrorCode.cs" />
+     <Compile Include="Assets/Phantomity/Scripts/DTO/DeepLinkData.cs" />
+     <Compile Include="Assets/Phantomity/Scripts/Utils/PhantomException.cs" />
+     <Compile Include="Assets/Phantomity/Scripts/Utils/UrlParser.cs" />
+     <Compile Include="Assets/Phantomity/Scripts/DeepLinkProtocol.cs" />
+     <Compile Include="Assets/Phantomity/Scripts/PhantomBridge.cs" />
+     <Compile Include="Assets/Phantomity/Scripts/Infrastructure/IPhantomBridge.cs" />
+     <Compile Include="Assets/Phantomity/Scripts/DTO/LinkConfig.cs" />
+     <Compile Include="Assets/Phantomity/Scripts/ConfigurableLink.cs" />
+     <Compile Include="Assets/Phantomity/Scripts/Utils/Base58Encoding.cs" />
+     <Compile Include="Assets/Phantomity/Scripts/Constants/UrlRegexVariables.cs" />
+     <Compile Include="Assets/Phantomity/Scripts/Constants/Cluster.cs" />
+     <Compile Include="Assets/Phantomity/Scripts/Constants/DisplayMessageTypes.cs" />
+     <Compile Include="Assets/Phantomity/Scripts/Utils/Cryptography.cs" />
+     <Compile Include="Assets/Phantomity/Scripts/SecretsVault.cs" />
+     <Compile Include="Assets/Phantomity/Scripts/Examples/PhantomityExample.cs" />
+     <None Include="Assets/Phantomity/Plugins/UniTask/package.json" />
      <None Include="Assets/Scripts/Plugins/Chaos.NaCl/Internal/Salsa/replace regex.txt" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.8f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -482,12 +361,6 @@
      </Reference>
      <Reference Include="UnityEngine.ClothModule">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.8f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.ClusterInputModule">
-     <HintPath>/Applications/Unity/Hub/Editor/2021.3.8f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.ClusterRendererModule">
-     <HintPath>/Applications/Unity/Hub/Editor/2021.3.8f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.CoreModule">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.8f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
@@ -644,9 +517,6 @@
      </Reference>
      <Reference Include="UnityEngine.VideoModule">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.8f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.VirtualTexturingModule">
-     <HintPath>/Applications/Unity/Hub/Editor/2021.3.8f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VirtualTexturingModule.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.WindModule">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.8f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
@@ -1158,6 +1028,9 @@
      <Reference Include="Unity.Services.Core.Environments">
      <HintPath>/Users/kirill/RiderProjects/unity-solana-helloworld/Library/ScriptAssemblies/Unity.Services.Core.Environments.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Mobile.AndroidLogcat.Editor">
+     <HintPath>/Users/kirill/RiderProjects/unity-solana-helloworld/Library/ScriptAssemblies/Unity.Mobile.AndroidLogcat.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Timeline.Editor">
      <HintPath>/Users/kirill/RiderProjects/unity-solana-helloworld/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
      </Reference>
@@ -1172,6 +1045,30 @@
     <ProjectReference Include="UnityWebSocket.Runtime.csproj">
       <Project>{50241d67-3f2f-84cb-f80e-b8725fd765b5}</Project>
       <Name>UnityWebSocket.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="asset-store-tools-editor.csproj">
+      <Project>{c3265a96-335b-d87c-7dae-79f8b91631d1}</Project>
+      <Name>asset-store-tools-editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniTask.Addressables.csproj">
+      <Project>{dc1bb2d3-232c-116b-1f72-31310c487feb}</Project>
+      <Name>UniTask.Addressables</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniTask.DOTween.csproj">
+      <Project>{08ddd2d3-3cb0-df62-9258-fdefbf6bfe9b}</Project>
+      <Name>UniTask.DOTween</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniTask.csproj">
+      <Project>{6f369842-82c2-b860-348d-5ec802c33c61}</Project>
+      <Name>UniTask</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniTask.TextMeshPro.csproj">
+      <Project>{ad9ca9bb-f0a6-89d9-d6a2-93cba9785042}</Project>
+      <Name>UniTask.TextMeshPro</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniTask.Linq.csproj">
+      <Project>{fb65d2c7-92f0-b55b-7498-5435ed931c16}</Project>
+      <Name>UniTask.Linq</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
